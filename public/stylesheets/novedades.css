@@ -1,0 +1,22 @@
+
+
+.verde {
+    color: darkgreen;
+}
+
+.verde:hover {
+    font-weight: bold;
+}
+
+.rojo {
+    color:darkred;
+}
+
+.rojo:hover {
+    font-weight: bold;
+}
+
+.boton {
+    color: white;
+    font-weight: bold;
+}

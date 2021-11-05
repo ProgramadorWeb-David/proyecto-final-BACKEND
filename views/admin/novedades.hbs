@@ -5,11 +5,15 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>Novedades</title>
+        <!-- Font-Awesome -->
+    <script src="https://kit.fontawesome.com/244f112946.js" crossorigin="anonymous"></script>
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Novedades</title>
+    <!-- Estilos css -->
+    <link rel="stylesheet" href="/stylesheets/novedades.css">
   </head>
   <body>
     
@@ -19,14 +23,14 @@
         <!-- fila para barra de navegacion -->
         <nav class="navbar navbar-dark bg-secondary navbar-expand-md">
            <div class="container">
-             <a href="#" class="navbar-brand"><span class="text-uppercase font-weight-bold">david leonel</span></a>
+             <a href="#" class="navbar-brand"><span class="text-uppercase font-weight-bold"> <<< Bienvenid@ {{usuario}} >>> </span></a>
              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navegador" aria-expanded="false">
                <span class="navbar-toggler-icon"></span>
              </button>
 
              <div class="collapse navbar-collapse" id="navegador">
                 <ul class="navbar-nav font-weight-bolder ml-auto">
-                  <li class="nav-item"><a href="#" class="nav-link ">Inicio</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
                   <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
                   <li class="nav-item"><a href="#" class="nav-link active">Novedades</a></li>
                   <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
@@ -36,8 +40,51 @@
            </div>
         </nav> <!-- fin row de navegador -->
 
-        <h2 class="bg-info text-white mt-3 text-center font-weight-bold">Este sitio se encuentra en construcción!</h2>
-        <a href="/admin/login/logout" class="btn btn-danger mt-3">Sign off</a>
+        <h2 class="bg-info text-white mt-3 mb-3 text-center font-weight-bold p-2">Sistema Administrativo de Noticias</h2>
+
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="table-responsive">
+                <table class="table table-striped"> <!-- inicio de tabla -->
+                  <thead> <!-- encabezado de la tabla -->
+                    <tr  class="table-success">
+                      <th>#</th>
+                      <th>título</th>
+                      <th>fecha</th>
+                      <th>autor</th>
+                      <th>descripción</th>
+                      <th>editar</th>
+                      <th>borrar</th>
+                    </tr>
+                  </thead>  <!-- fin encabezado de la tabla -->
+                
+                  <tbody>  <!-- cuerpo de la tabla -->
+                  {{#each noticias}}
+                    <tr>
+                      <td>{{id_noticia}}</td>
+                      <td>{{titulo}}</td>
+                      <td>{{fecha}}</td>
+                      <td>{{autor}}</td>
+                      <td>{{descripcion}}</td>
+                      <td class="text-center"><i class="far fa-edit verde"></i></td></button>
+                      <td class="text-center"><i class="far fa-trash-alt rojo"></i></td>
+                    </tr>
+                  {{/each}}  
+                  </tbody>  <!-- fin cuerpo de la tabla -->
+                </table> <!-- fin de la tabla -->
+                <div class="d-flex justify-content-between mb-3">
+                    <p class="text-muted">Agregar nueva noticia ---> </p>
+                    <a href="/admin/novedades/agregar" class="btn btn-success boton"><i class="fas fa-plus"></i> Agregar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 d-flex justify-content-center">
+          <a href="/admin/login/logout" class="btn btn-danger font-weight-bolder mb-2">Sign off</a>
+        </div>
 
     </div>
 
