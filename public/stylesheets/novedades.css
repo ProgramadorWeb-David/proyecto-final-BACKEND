@@ -6,6 +6,12 @@
 
 .verde:hover {
     font-weight: bold;
+    cursor: pointer;
+    transform: translateY(-2px) scale(1.01);
+    -webkit-transform: translateY(-2px) scale(1.01);
+    -moz-transform: translateY(-2px) scale(1.01);
+    -ms-transform: translateY(-2px) scale(1.01);
+    -o-transform: translateY(-2px) scale(1.01);
 }
 
 .rojo {
@@ -14,6 +20,12 @@
 
 .rojo:hover {
     font-weight: bold;
+    cursor: pointer;
+    transform: translateY(-2px) scale(1.01);
+    -webkit-transform: translateY(-2px) scale(1.01);
+    -moz-transform: translateY(-2px) scale(1.01);
+    -ms-transform: translateY(-2px) scale(1.01);
+    -o-transform: translateY(-2px) scale(1.01);
 }
 
 .boton {

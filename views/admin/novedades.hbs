@@ -67,8 +67,8 @@
                       <td>{{fecha}}</td>
                       <td>{{autor}}</td>
                       <td>{{descripcion}}</td>
-                      <td class="text-center"><i class="far fa-edit verde"></i></td></button>
-                      <td class="text-center"><i class="far fa-trash-alt rojo"></i></td>
+                      <td class="text-center"> <a href="/admin/novedades/modificar/{{id_noticia}}"> <i class="far fa-edit verde"></i> </a> </td>
+                      <td class="text-center"> <a href="/admin/novedades/eliminar/{{id_noticia}}"> <i class="far fa-trash-alt rojo"></i> </a> </td>
                     </tr>
                   {{/each}}  
                   </tbody>  <!-- fin cuerpo de la tabla -->
