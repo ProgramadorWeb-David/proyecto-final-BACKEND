@@ -50,6 +50,7 @@
                   <thead> <!-- encabezado de la tabla -->
                     <tr  class="table-success">
                       <th>#</th>
+                      <th>imagen</th>
                       <th>título</th>
                       <th>fecha</th>
                       <th>autor</th>
@@ -63,6 +64,7 @@
                   {{#each noticias}}
                     <tr>
                       <td>{{id_noticia}}</td>
+                      <td>{{{imagen}}}</td>
                       <td>{{titulo}}</td>
                       <td>{{fecha}}</td>
                       <td>{{autor}}</td>
@@ -96,5 +98,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
+
 
 

@@ -18,8 +18,20 @@
         </div>
 
         <div class="mt-1 d-flex justify-content-center">
-            <form action="/admin/novedades/modificar" method="post">
+            <form action="/admin/novedades/modificar" method="post" enctype="multipart/form-data">
                 <input type="hidden" value="{{noticia.id_noticia}}" name="id">
+
+                <div class="form-group text-center">
+                    <p>
+                        <label>Imagen: <input type="file" name="imagen" id="imagen" class="form-control text-center"> </label>
+                    </p>
+
+                    <p>
+                        <label> <input type="checkbox" name="img_delete" id="img_delete" value="1"> Quieres eliminar la imagen actual? </label>
+                        <input type="hidden" name="img_original" value="{{not.img_id}}">
+                    </p>
+                </div>
+
                 <div class="form-group text-center">
                     <label for="">Título:</label>
                     <input type="text" class="form-control text-center" name="titulo" value="{{noticia.titulo}}">
@@ -37,7 +49,7 @@
 
                 <div class="form-group text-center">
                     <label for="">Descripción:</label>
-                    <textarea id="" cols="30" rows="5" class="form-control text-center" name="descripcion"> {{noticia.descripcion}} </textarea>
+                    <textarea cols="30" rows="5" class="form-control text-center" name="descripcion"> {{noticia.descripcion}} </textarea>
                 </div>
 
                 <div class="d-flex justify-content-between mb-3">
